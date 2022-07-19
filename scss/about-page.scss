@@ -1,0 +1,357 @@
+@import "_variable";
+
+.about-us-hero-section {
+	position: relative;
+	padding: 40px 0 80px;
+	@include desktop {
+		padding-bottom: 40px;
+	}
+	@include desktop-992 {
+		padding-top: 32px;
+		padding-bottom: 24px;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 234px;
+		background-color: #fff;
+		@include desktop {
+			height: 176px;
+		}
+	}
+	.container {
+		position: relative;
+	}
+	&__frame {
+		@include tablet {
+			text-align: center;
+			margin: 0 0 32px;
+		}
+	}
+	&__title {
+		margin: 0 0 48px;
+		@include desktop-992 {
+			margin-bottom: 32px;
+		}
+	}
+	&__img {
+		box-shadow: -105.228px 165.358px 143px rgba(0, 0, 0, 0.04), -68.2031px 107.176px 83.7477px rgba(0, 0, 0, 0.0303704), -40.5321px 63.6933px 45.5481px rgba(0, 0, 0, 0.0242963), -21.0455px 33.0715px 23.2375px rgba(0, 0, 0, 0.02), -8.5741px 13.4736px 11.6519px rgba(0, 0, 0, 0.0157037), -1.94866px 3.06218px 5.62732px rgba(0, 0, 0, 0.00962963);
+		border-radius: 2px;
+		img {
+			vertical-align: top;
+			max-width: 100%;
+			height: auto;
+			border-radius: 2px;
+		}
+	}
+}
+.our-info-section {
+	background-color: #fff;
+	padding: 120px 0;
+	@include desktop {
+		padding: 112px 0;
+	}
+	@include desktop-992 {
+		padding: 80px 0;
+	}
+	@include tablet {
+		padding: 64px 0;
+	}
+	&__title {
+		color: $orange-color;
+		margin: 0 0 32px;
+		@include desktop { 
+			margin-bottom: 24px;
+		}
+		@include desktop-992 {
+			margin-bottom: 16px;
+		}
+	}
+	&__wrap {
+		@include desktop {
+			align-items: center;
+		}
+		@include desktop-992 {
+			align-items: flex-start;
+		}
+	}
+	&__aside {
+		max-width: 328px;
+		@include desktop {
+			max-width: 268px;
+		}
+		@include desktop-992 {
+			max-width: 246px;
+		}
+		@include tablet {
+			max-width: 472px;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 56px;
+		}
+		@include mobile-sm {
+			margin-bottom: 32px;
+		}
+	}
+}
+.our-info-list {
+	display:-ms-grid;
+	display:grid;
+	-ms-grid-columns:repeat(3, 1fr);
+	grid-template-columns:repeat(3, 1fr);
+	grid-gap: 48px;
+	@include desktop-992 {
+		grid-gap: 32px;
+	}
+	@include mobile-sm {
+		-ms-grid-columns:1fr;
+		grid-template-columns:1fr;
+		grid-gap: 24px;
+		text-align: center;
+	}
+	&__icon {
+		margin: 0 0 32px;
+		height: 56px;
+		@include desktop {
+			margin-bottom: 24px;
+			height: 48px;
+		}
+		@include desktop-992 {
+			height: 40px;
+			margin-bottom: 16px;
+		}
+		.style-svg,
+		img {
+			height: 56px;
+			width: 56px;
+			object-fit: contain;
+			@include desktop {
+				width: 48px;
+				height: 48px;
+			}
+			@include desktop {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+	&__name {
+		margin: 0 0 24px;
+		@include desktop {
+			margin-bottom: 16px;
+		}
+	}
+}
+.acf-map {
+	width: 100%;
+	height: 640px;
+	border: 8px solid #fff;
+	border-radius: 8px;
+	@include desktop {
+		height: 552px;
+	}
+	@include desktop-992 {
+		height: 404px;
+	}
+	@include tablet {
+		height: 346px;
+	}
+	@include mobile-sm {
+		height: 264px;
+	}
+	img {
+		max-width: inherit !important;
+	}
+}
+.location-section-wrap {
+	padding: 80px 0;
+	background-color: #fff;
+	@include desktop {
+		padding: 40px 0;
+	}
+	@include desktop-992 {
+		padding: 24px 0;
+	}
+	@include tablet {
+		padding-bottom: 0;
+	}
+	@include mobile-sm {
+		padding: 0;
+	}
+}
+.location-section {
+	padding: 120px 0;
+	position: relative;
+	@include desktop {
+		padding: 88px 0;
+	}
+	@include desktop-992 {
+		padding: 64px 0;
+	}
+	@include tablet {
+		padding: 48px 0;
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 60vw;
+		background-color: $nude-color;
+		@include desktop {
+			width: 70vw;
+		}
+		@include desktop-992 {
+			width: 65vw;
+		}
+		@include tablet {
+			width: 80vw;
+		}
+		@include mobile {
+			width: 100%;
+			bottom: 96px;
+		}
+	}
+	&__wrap {
+		position: relative;
+		align-items: center;
+	}
+	&__block {
+		max-width: 368px;
+		@include desktop {
+			max-width: 324px;
+		}
+		@include mobile {
+			text-align: center;
+			max-width: 100%;
+			margin-bottom: 40px;
+		}
+	}
+	&__title {
+		color: $blue-color;
+		margin: 0 0 24px;
+	}
+	&__text {
+		margin: 0 0 24px;
+	}
+}
+.team-section-wrap {
+	padding: 80px 0 0;
+	background-color: #fff;
+	@include desktop {
+		padding-top: 33px;
+	}
+	@include desktop-992 {
+		padding-top: 24px;
+	}
+	@include tablet {
+		padding-top: 0;
+	}
+}
+.offer-section {
+	padding: 120px 0;
+	background-color: #fff;
+	@include desktop {
+		padding: 112px 0;
+	}
+	@include desktop-992 {
+		padding: 80px 0;
+	}
+	@include tablet {
+		padding: 64px 0;
+	}
+	@include mobile {
+		padding: 48px 0;
+	}
+	&__head {
+		max-width: 424px;
+		padding-top: 40px;
+		@include desktop {
+			max-width: 291px;
+		}
+		@include desktop-992 {
+			padding-top: 32px;
+		}
+		@include tablet {
+			text-align: center;
+			max-width: 472px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 64px;
+			padding-top: 0;
+		}
+		@include mobile-sm {
+			margin-bottom: 32px;
+		}
+	}
+	&__title {
+		margin: 0 0 32px;
+		color: $blue-color;
+		@include desktop {
+			margin-bottom: 24px;
+		}
+		@include tablet {
+			margin-bottom: 16px;
+		}
+	}
+}
+.offer-items-grid {
+	display:-ms-grid;
+	display:grid;
+	-ms-grid-columns:repeat(2, 1fr);
+	grid-template-columns:repeat(2, 1fr);
+	grid-gap: 24px;
+	@include mobile-sm {
+		-ms-grid-columns:1fr;
+		grid-template-columns:1fr;
+		grid-gap: 8px;
+		margin-left: -16px;
+		margin-right: -16px;
+	}
+	&__frame {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: column;
+	}
+	&__item {
+		-webkit-box-flex:1 1 auto;
+		-moz-box-flex: 1 1 auto;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		padding: 40px 48px;
+		background-color: #FAFAFA;
+		border-radius: 8px;
+		color: $navy-color;
+		transition: all 0.3s ease 0s;
+		@include desktop {
+			padding: 40px;
+		}
+		@include desktop-992 {
+			padding: 32px;
+		}
+		@include mobile {
+			padding: 32px 24px;
+		}
+		@include mobile-sm {
+			padding: 32px;
+		}
+		&:hover {
+			background-color: $navy-color;
+			color: $white-color;
+		}
+	}
+	&__icon {
+		margin: 0 0 16px;
+	}
+	&__title {
+		margin: 0 0 16px;
+	}
+}

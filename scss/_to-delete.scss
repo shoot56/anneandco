@@ -1,0 +1,169 @@
+ @import "_variable";
+
+.our-team-section {
+	background-color: #FEFCF8;
+	background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)' stroke='%23F4DCAD' stroke-opacity='.4'%3E%3Cpath d='M-104.179 114.177 26.208-16.21M-94.222 114.235 36.165-16.152M-84.253 114.259 46.134-16.128M-74.252 114.263 56.135-16.124M-64.256 114.263 66.131-16.124M-54.26 114.263 76.127-16.124M-44.252 114.263 86.135-16.124M-34.255 114.263 96.132-16.124M-24.267 114.263 106.12-16.124M-14.271 114.263 116.116-16.124M-3.884 113.919 126.503-16.468M5.746 114.263 136.133-16.124M15.738 114.263 146.125-16.124M25.731 114.263 156.118-16.124M35.759 114.263 166.146-16.124M45.818 114.169 176.205-16.218M55.736 114.263 186.123-16.124M66.131 113.888 196.518-16.499M75.737 114.263 206.124-16.124M85.264 114.763 215.651-15.624M-104.202 104.208 26.184-26.179'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h100v100H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+	background-repeat: repeat;
+	padding: 120px 0;
+	@include desktop {
+		padding: 80px 0 90px;
+	}
+	@include desktop-992 {
+		padding: 80px 0 80px;
+	}
+	@include tablet {
+		padding: 56px 0;
+	}
+	@include mobile {
+		padding: 40px 0;
+	}
+	.container {
+		max-width: 1096px;
+		@include desktop {
+			max-width: 946px;
+		}
+		@include desktop-992 {
+			max-width: 796px;
+		}
+		@include tablet {
+			max-width: 720px;
+		}
+		@include mobile {
+			max-width: 540px;
+		}
+	}
+	&__header {
+		text-align: center;
+		margin-bottom: 48px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include desktop-992 {
+			margin-bottom: 32px;
+		}
+		@include mobile {
+			display: block;
+		}
+		h3 {
+			margin: 0;
+			color: $blue-color;
+			@include mobile {
+				margin-bottom: 10px;
+			}
+		}
+		p {
+			margin: 0;
+			font-weight: 300;
+		}
+	}
+}
+.archive-main {
+	padding: 60px 0;
+}
+// old contact section
+.contact-section {
+	padding: 64px 0 104px;
+	background-color: #F7F9FF;
+	@include desktop {
+		padding-top: 56px;
+		padding-bottom: 80px;
+	}
+	@include desktop-992 {
+		padding-top: 40px;
+		padding-bottom: 64px;
+	}
+	@include mobile {
+		padding-top: 32px;
+		padding-bottom: 48px;
+	}
+	&__head {
+		margin-bottom: 80px;
+		align-items: center;
+		display:-ms-grid;
+		display:grid;
+		grid-gap: 64px;
+		-ms-grid-columns:628px 1fr;
+		grid-template-columns:628px 1fr;
+		@include desktop {
+			grid-gap: 48px;
+			-ms-grid-columns:1fr 1fr;
+			grid-template-columns:1fr 1fr;
+			margin-bottom: 64px;
+		}
+		@include desktop-992 {
+			grid-gap: 32px;
+		}
+		@include tablet {
+			grid-gap: 16px;
+			margin-bottom: 60px;
+		}
+		@include mobile {
+			-ms-grid-columns:1fr;
+			grid-template-columns:1fr;
+			margin-bottom: 48px;
+		}
+		.contact-form__title {
+			margin-bottom: 0;
+		}
+		.contact-form__description {
+			margin-bottom: 0;
+		}
+	}
+	&__wrap {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		align-items: center;
+		@include tablet {
+			display: block;
+		}
+	}
+	&__divider {
+		border-left: 1px solid #D3D7E5;
+		margin-left: auto;
+		margin-right: auto;
+		align-self: stretch;
+		@include tablet {
+			border-top: 1px solid #D3D7E5;
+			border-left-width: 0;
+			margin: 48px 0;
+		}
+	}
+	.contact-form {
+		-webkit-box-flex:1 1 auto;
+		-moz-box-flex: 1 1 auto;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		max-width: 566px;
+		padding-right: 30px;
+		@include desktop-992 {
+			padding-right: 48px;
+		}
+		@include tablet {
+			max-width: 100%;
+			padding: 0;
+		}
+	}
+	.contact-info {
+		-webkit-box-flex:1 1 auto;
+		-moz-box-flex: 1 1 auto;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		max-width: 498px;
+		padding-left: 30px;
+		@include desktop-992 {
+			min-width: 480px;
+			padding-left: 48px;
+		}
+		@include tablet {
+			padding-left: 0;
+		}
+		@include mobile {
+			min-width: 0;
+		}
+	}
+}

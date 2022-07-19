@@ -1,0 +1,405 @@
+ @import "_variable";
+
+ .blog-article {
+    &__header {
+        padding: 64px 0 80px;
+        margin: auto;
+        @include desktop {
+            padding: 50px 0 72px;
+        }
+        @include desktop-992 {
+            padding: 42px 0 46px;
+        }
+        @include tablet {
+            padding: 27px 0 46px;
+        }
+        @include mobile {
+            padding: 20px 0 20px;
+        }
+    }
+    &__tags {
+        margin: 0 0 32px;
+        justify-content: center;
+        @include desktop {
+            margin: 0 0 20px;
+        }
+        @include desktop-992 {
+            margin: 0 0 10px;
+        }
+    }
+    &__caterory {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin: 0 0 32px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: 0.08em;
+        @include desktop {
+            margin: 0 0 20px;
+        }
+        @include desktop-992 {
+            margin: 0 0 10px;
+        }
+        @include mobile {
+            font-size: 14px;
+            margin: 0 0 7px;
+        }
+        a {
+            text-decoration: none;
+            color: #666;
+            display: block;
+            &:not(:last-child) {
+                position: relative;
+                &:after {
+                    content: '';
+                    width: 1px;
+                    height: 18px;
+                    margin-top: -9px;
+                    position: absolute;
+                    top: 50%;
+                    right: -10px;
+                    background-color: #ccc;
+                }
+            }
+            &:hover {
+                color: $orange-color;
+            }
+        }
+    }
+    &__title {
+        text-align: center;
+        margin: 0 0 60px;
+        @include desktop {
+            margin: 0 0 46px;
+        }
+        @include desktop-992 {
+            margin: 0 0 40px;
+        }
+        @include tablet {
+            margin: 0 0 32px;
+        }
+        @include mobile {
+            margin: 0 0 24px;
+        }
+    }
+    &__info {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        color: #666;
+        @include tablet {
+            gap: 24px;
+        }
+        .sep {
+            display: block;
+            width: 1px;
+            height: 28px;
+            background-color: #ccc;
+        }
+    }
+    &__read-time {
+        position: relative;
+        padding-left: 28px;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 50%;
+            margin-top: -10px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0C4.486 0 0 4.486 0 10s4.486 10 10 10 10-4.486 10-10S15.514 0 10 0Zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8Z' fill='%23215FE5'/%3E%3Cpath d='M11 6a1 1 0 1 0-2 0v3.05c0 .873.347 1.71.964 2.329L11.586 13A1 1 0 1 0 13 11.586l-1.207-1.207A2.707 2.707 0 0 1 11 8.465V6Z' fill='%23215FE5'/%3E%3C/svg%3E");
+        }
+    }
+    &__image {
+        overflow: hidden;
+        @include desktop {
+            height: 520px;
+        }
+        @include desktop-992 {
+            height: 400px;
+        }
+        @include tablet {
+            height: 312px;
+        }
+        @include mobile {
+            height: 240px;
+        }
+        @include mobile-sm {
+            height: 216px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            width: 100%;
+            max-height: 700px;
+            object-fit: cover;
+            vertical-align: top;
+            @include desktop {
+                height: 100%;
+            }
+        }
+    }
+    &__main {
+        display:-ms-grid;
+        display:grid;
+        -ms-grid-columns:48px 1fr 384px;
+        grid-template-columns:48px 1fr 384px;
+        grid-gap: 64px;
+        position: relative;
+        padding: 120px 0 80px;
+        @include desktop {
+            padding: 92px 0 80px;
+            -ms-grid-columns:40px 1fr 340px;
+            grid-template-columns:40px 1fr 340px;
+            grid-gap: 57px;
+        }
+        @include desktop-992 {
+            padding: 60px 0 80px;
+            grid-gap: 42px;
+            -ms-grid-columns:40px 1fr 262px;
+            grid-template-columns:40px 1fr 262px;
+        }
+        @include tablet {
+            padding: 40px 0;
+            grid-gap: 38px;
+            -ms-grid-columns:1fr 186px;
+            grid-template-columns:1fr 186px;
+        }
+        @include mobile {
+            display: block;
+            padding: 24px 0 32px;
+        }
+    }
+    &__share {
+        position: sticky;
+        top: 100px;
+        align-self: flex-start;
+        @include tablet {
+            display: none;
+        }
+    }
+    &__aside {
+        position: sticky;
+        top: 100px;
+        align-self: flex-start;
+        padding-left: 48px;
+        @include desktop-992 {
+            padding-left: 18px;
+        }
+        @include tablet {
+            padding-left: 0;
+        }
+        @include mobile {
+            margin-top: 32px;
+            .aside-cta {
+                display: none;
+            }
+        }
+    }
+    &__content {
+        h2 {
+            margin-bottom: 24px;
+        }
+        h3 {
+            margin-bottom: 24px;
+        }
+        h4 {
+            margin-bottom: 24px;
+        }
+        h5 {
+            margin-bottom: 24px;
+        }
+        h6 {
+            margin-bottom: 24px;
+        }
+        p {
+            margin: 0 0 24px;
+        }
+        a:not(.btn) {
+            color: $orange-color;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .wp-block-separator {
+            max-width: 300px;
+            margin-top: 24px;
+            margin-bottom: 24px;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom-width: 0;
+            border-color: #D07D59;
+            &.is-style-wide {
+                max-width: 100%;
+            }
+        }
+        .wp-block-quote {
+            margin: 64px 0;
+            border-top: 1px solid #DAE1F7;
+            border-bottom: 1px solid #DAE1F7;
+            padding: 112px 0 48px;
+            color: $blue-color;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 52px;
+            position: relative;
+            @include tablet {
+                line-height: 1.6;
+                font-size: 24px;
+            }
+            @include mobile {
+                font-size: 20px;
+                padding: 54px 0 32px;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 48px;
+                left: 0;
+                width: 124px;
+                height: 40px;
+                background-repeat: no-repeat;
+                background-image: url("data:image/svg+xml,%3Csvg width='124' height='40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.182 15.952c-.596 0-1.167.09-1.737.174.185-.62.375-1.25.68-1.817.304-.823.78-1.537 1.252-2.256.396-.777 1.093-1.304 1.606-1.969.537-.646 1.27-1.077 1.85-1.614.568-.56 1.314-.841 1.907-1.237.62-.355 1.16-.748 1.737-.935l1.44-.593 1.267-.527L20.888 0l-1.596.385c-.51.128-1.132.278-1.84.457-.725.133-1.497.5-2.357.833-.85.38-1.833.636-2.747 1.246-.92.582-1.98 1.068-2.915 1.849-.906.804-1.999 1.501-2.806 2.525-.882.956-1.753 1.96-2.429 3.104-.783 1.09-1.314 2.288-1.875 3.471a29.597 29.597 0 0 0-1.25 3.57 32.255 32.255 0 0 0-1.027 6.512c-.09 1.918-.037 3.514.075 4.668.04.545.115 1.074.168 1.44l.067.449.07-.016a12.024 12.024 0 1 0 11.756-14.541Zm29.392 0c-.595 0-1.167.09-1.736.174.184-.62.374-1.25.678-1.817.305-.823.78-1.537 1.254-2.256.395-.777 1.092-1.304 1.605-1.969.537-.646 1.27-1.077 1.85-1.614.569-.56 1.314-.841 1.907-1.237.62-.355 1.16-.748 1.737-.935l1.44-.593 1.267-.527L50.28 0l-1.595.385c-.51.128-1.133.278-1.841.457-.724.133-1.497.5-2.357.833-.847.382-1.833.636-2.747 1.248-.92.583-1.98 1.069-2.915 1.85-.906.803-1.999 1.5-2.806 2.522-.881.956-1.752 1.96-2.428 3.104-.783 1.09-1.315 2.288-1.876 3.471a29.594 29.594 0 0 0-1.25 3.57 32.256 32.256 0 0 0-1.027 6.512c-.09 1.918-.037 3.514.075 4.668.04.545.115 1.074.168 1.44l.067.449.07-.016a12.024 12.024 0 1 0 11.756-14.541ZM111.017 24.048c.596 0 1.168-.09 1.737-.174-.185.62-.374 1.25-.679 1.817-.305.823-.78 1.537-1.253 2.256-.396.777-1.093 1.303-1.606 1.969-.537.646-1.269 1.077-1.849 1.614-.569.56-1.315.841-1.908 1.237-.62.355-1.16.748-1.737.935l-1.44.593-1.266.527L102.312 40l1.595-.385c.51-.128 1.133-.278 1.841-.457.724-.133 1.496-.5 2.356-.833.85-.38 1.833-.636 2.747-1.245.919-.583 1.98-1.07 2.915-1.85.906-.804 1.999-1.501 2.806-2.525.882-.956 1.753-1.96 2.429-3.104.783-1.09 1.315-2.288 1.876-3.471a29.711 29.711 0 0 0 1.25-3.57 32.234 32.234 0 0 0 1.026-6.512c.091-1.918.038-3.514-.075-4.668a20.653 20.653 0 0 0-.168-1.44l-.067-.449-.069.016a12.025 12.025 0 1 0-11.757 14.541Zm-29.392 0c.596 0 1.168-.09 1.737-.174-.185.62-.374 1.25-.68 1.817-.304.823-.78 1.537-1.252 2.256-.396.777-1.093 1.303-1.606 1.969-.537.646-1.27 1.077-1.85 1.614-.568.56-1.314.841-1.907 1.237-.62.355-1.16.748-1.737.935l-1.44.593-1.266.527L72.919 40l1.596-.385c.51-.128 1.132-.278 1.84-.457.725-.133 1.497-.5 2.357-.833.847-.382 1.833-.636 2.747-1.248.92-.583 1.98-1.069 2.915-1.85.906-.803 1.999-1.5 2.806-2.522.882-.956 1.753-1.96 2.429-3.104.783-1.09 1.314-2.288 1.876-3.471a29.594 29.594 0 0 0 1.25-3.57 32.256 32.256 0 0 0 1.026-6.512c.09-1.918.038-3.514-.075-4.668a20.385 20.385 0 0 0-.168-1.44l-.067-.449-.07.016a12.023 12.023 0 1 0-11.756 14.541Z' fill='%23E6E9F2'/%3E%3C/svg%3E");
+                @include mobile {
+                    top: 24px;
+                    width: 62px;
+                    height: 20px;
+                    background-size: contain;
+                }
+            }
+            p {
+                margin: 0 0 16px;
+            }
+            cite {
+                color: #737373;
+                font-size: 18px;
+                line-height: 28px;
+                display: block;
+                font-style: normal;
+            }
+        }
+        .wp-block-gallery,
+        .wp-block-image {
+            margin: 48px 0;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            figcaption {
+                color: #737373;
+                font-style: italic;
+                font-size: 16px;
+                line-height: 24px;
+                margin: 16px 0 0;
+            }
+        }
+        .wp-block-columns {
+            .wp-block-image {
+                margin: 25px 0;
+            }
+        }
+    }
+    &__section {
+        position: relative;
+        .readingProgressbar {
+            position: sticky !important;
+            top: 64px !important;
+            bottom: auto !important;
+        }
+    }
+}
+
+
+
+.block-service-cta {
+    display:-ms-grid;
+    display:grid;
+    -ms-grid-columns:332px 1fr;
+    grid-template-columns:332px 1fr;
+    margin-bottom: 24px;
+    align-items: center;
+    @include desktop {
+        -ms-grid-columns:287px 1fr;
+        grid-template-columns:287px 1fr;
+    }
+    @include desktop-992 {
+        -ms-grid-columns:247px 1fr;
+        grid-template-columns:247px 1fr;
+    }
+    @include tablet {
+        -ms-grid-columns:216px 1fr;
+        grid-template-columns:216px 1fr;
+    }
+    @include mobile-sm {
+        -ms-grid-columns:1fr;
+        grid-template-columns:1fr;
+    }
+    &--nude {
+        background-color: $nude-color;
+        color: $navy-color;
+    }
+    &--cream {
+        background-color: $cream-color;
+        color: $blue-color;
+    }
+    &--orange {
+        background-color: $orange-color;
+        color: #fff;
+    }
+    &--blue {
+        background-color: $blue-color;
+        color: $cream-color;
+    }
+    &--navy {
+        background-color: $navy-color;
+        color: $orange-color;
+    }
+    &--white {
+        background-color: $white-color;
+        color: $navy-color;
+    }
+    &__visual {
+        position: relative;
+        height: 100%;
+        min-height: 260px;
+        @include desktop {
+            min-height: 244px;
+        }
+        @include desktop-992 {
+            min-height: 232px;
+        }
+        @include tablet {
+            min-height: 224px;
+        }
+        @include mobile-sm {
+            min-height: 144px;
+            height: 144px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__frame {
+        padding: 40px 48px;
+        @include desktop {
+            padding: 32px 40px;
+        }
+        @include tablet {
+            padding: 24px 32px;
+        }
+        @include mobile-sm {
+            padding: 24px;
+        }
+    }
+    &__title {
+        margin: 0 0 24px;
+    } 
+}
