@@ -719,7 +719,35 @@ get_header();
 
 
 </div>
-
+<?php if ( have_rows( 'seo_section' ) ) : ?>
+	<section class="seo-service-section">
+		<div class="container">
+			<div class="seo-service-section__tabs tabset">
+				<?php $counterControl = 0; ?>
+				<?php $counteritem = 0; ?>
+				<ul class="seo-service-section__tab-control tab-control" data-aos="fade" data-aos-duration="300" data-aos-delay="300">
+					<?php while ( have_rows( 'seo_section' ) ) : the_row(); ?>
+						<li class="tab-control__item"><a href="#" class="seo-service-section__tab-opener tab-opener h5 <?php if ($counterControl == 0): ?>active<?php endif; ?>"><span><?php the_sub_field( 'tab_title' ); ?></span></a></li>
+						<?php $counterControl = $counterControl + 1; ?>
+					<?php endwhile; ?>
+				</ul>
+				<div class="seo-service-section__tab-items tab-items" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="500">
+					<?php while ( have_rows( 'seo_section' ) ) : the_row(); ?>
+						<div class="tab-item <?php if ($counteritem == 0): ?>active<?php endif; ?>">
+							<div class="category-seo">
+								<div class="category-seo__wrap">
+									<?php the_sub_field( 'tab_content' ); ?>
+								</div>
+							</div>
+						</div>
+						<?php $counteritem = $counteritem + 1; ?>
+					<?php endwhile; ?>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+<?php endif; ?>
 
 <section class="other-services">
 	<div class="container">

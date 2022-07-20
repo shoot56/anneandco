@@ -14,3 +14,4 @@
 05/26/22 1:20:16: style.scss - parse error: failed at `width: ;` /var/www/vhosts/anneandco.ie/httpdocs/wp-content/themes/anneco/scss/style.scss on line 10702, at column 6
 05/26/22 1:20:19: style.scss - parse error: failed at `width: ;` /var/www/vhosts/anneandco.ie/httpdocs/wp-content/themes/anneco/scss/style.scss on line 10702, at column 6
 05/26/22 1:21:48: style.scss - parse error: failed at `width: ;` /var/www/vhosts/anneandco.ie/httpdocs/wp-content/themes/anneco/scss/style.scss on line 10702, at column 6
+07/18/22 11:36:45: style.scss - `_components` file not found for @import: style.scss on line 4, at column 1
