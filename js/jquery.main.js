@@ -294,9 +294,9 @@
 		}, false );
 
 		if ($('.category-seo').length) {
-			if (window.matchMedia("(max-width: 576px)").matches) {
-				seotext();
-			}
+			seotext();
+			// if (window.matchMedia("(max-width: 576px)").matches) {
+			// }
 		}
 
 	});
@@ -638,7 +638,7 @@
 					// 	offsetFirstHeading = thirdP.position().top;
 					// }
 					if (!offsetFirstHeading) {
-						offsetFirstHeading = 145;
+						offsetFirstHeading = 176;
 					}
 					$container.css('max-height', offsetFirstHeading);
 				};

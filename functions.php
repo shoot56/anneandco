@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.1.0' );
+	define( '_S_VERSION', '1.1.2' );
 }
 
 
@@ -263,3 +263,5 @@ require get_template_directory() . '/inc/post-blocks.php';
 require get_template_directory() . '/inc/key.php';
 
 require get_template_directory() . '/inc/settings.php';
+
+require get_template_directory() . '/inc/custom-post-type.php';
