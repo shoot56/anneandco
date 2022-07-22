@@ -299,9 +299,9 @@
 		}, false );
 
 		if ($('.category-seo').length) {
-			seotext();
-			// if (window.matchMedia("(max-width: 576px)").matches) {
-			// }
+			if (window.matchMedia("(max-width: 576px)").matches) {
+				seotext();
+			}
 		}
 
 	});
