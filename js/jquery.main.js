@@ -623,8 +623,6 @@
 			var $container = $('.category-seo__wrap', $this);
 			var name_show = $this.attr('data-name-show');
 			var name_hide = $this.attr('data-name-hide');
-console.log($container.height());
-console.log($this.height());
 			if($container.height() > $this.height())
 			{
 				var $action = $(
