@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.1.2' );
+	define( '_S_VERSION', '1.1.4' );
 }
 
 
@@ -190,6 +190,9 @@ function anneco_scripts() {
 
 	if(is_page_template('page-templates/about-us-page.php')) {
 		wp_enqueue_style( 'about-us-style', get_template_directory_uri() . '/css/about-page.css', array(), filemtime(get_template_directory() . '/css/about-page.css') );
+	}
+	if(is_page_template('page-templates/index-page.php')) {
+		wp_enqueue_style( 'index-style', get_template_directory_uri() . '/css/critical-index.css', array(), filemtime(get_template_directory() . '/css/critical-index.css') );
 	}
 	if (is_singular('post')) {
 		wp_enqueue_style( 'blog-article', get_template_directory_uri() . '/css/blog-article.css', array(), filemtime(get_template_directory() . '/css/blog-article.css') );

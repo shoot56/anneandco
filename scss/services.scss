@@ -3441,15 +3441,29 @@
 				margin-bottom: 0;
 			}
 		}
+		.tab-item {
+			display: block;
+			position: absolute;
+			opacity: 0;
+			visibility: hidden;
+			left: 0;
+			width: 100%;
+			&.active {
+				position: relative;
+				visibility: visible;
+				opacity: 1;
+			}
+		}
 	}
 }
 
 .category-seo {
-	max-height: 100%;
+	max-height: 175px;
 	position: relative;
 	margin: 0;
+	// height: 175px;
 	&__action {
-		text-align: center;
+		text-align: left;
 		padding: 15px 0 0;
 		a {
 			position: relative;
@@ -3465,6 +3479,7 @@
 	&.active {
 		max-height: none;
 		overflow: visible;
+		height: auto;
 		.category-seo__wrap {
 			max-height: none !important;
 		}
