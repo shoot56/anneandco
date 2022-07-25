@@ -307,11 +307,16 @@
 		$('.tooltip').tooltipster({
 			animation: 'fade',
 			delay: 200,
-			theme: 'tooltipster-anneco',
-			touchDevices: false,
-			position: 'top',
-			trigger: 'hover'
+			// theme: 'tooltipster-anneco',
+			// touchDevices: false,
+			// position: 'top',
+			// trigger: 'click'
+			maxWidth: 300,
+			arrowColor: '#1E293A',
 		});
+
+		$('input:radio[name="radio-budget"]').prop('checked', false);
+
 		$('.menu-budget').on('change', function(event) {
 			let val = $(this).val();
 			$('input:radio[name="radio-budget"]').prop('checked', false);

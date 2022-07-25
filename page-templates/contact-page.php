@@ -10,7 +10,7 @@ get_header();
 <section class="contacts-section">
 	<div class="container">
 		<div class="contacts-section__wrap">
-			<div class="contacts-section__info" data-aos="fade" data-aos-delay="600">
+			<div class="contacts-section__info" data-aos="fade" data-aos-delay="300">
 				<h1 class="contacts-section__title"><?php the_field( 'title' ); ?></h1>
 				<div class="contacts-section__description"><?php the_field( 'description' ); ?></div>
 				<div class="contacts-section__list">
@@ -36,7 +36,7 @@ get_header();
 					<?php endif; ?>
 				</div>
 			</div>
-			<div class="contacts-section__form" data-aos="fade" data-aos-delay="800">
+			<div class="contacts-section__form" data-aos="fade" data-aos-delay="600">
 				<?php 
 				$form_shortcode = get_field( 'form_shortcode' );
 				echo do_shortcode($form_shortcode); 
@@ -53,14 +53,14 @@ get_header();
 			<div class="steps-section__frame">
 				<div class="container">
 					<div class="steps-section__head">
-						<div class="steps-section__label"><?php the_sub_field( 'label' ); ?></div>
-						<div class="steps-section__title h3" data-aos="fade" data-aos-delay="0" data-aos-duration="300"><span><?php the_sub_field( 'title' ); ?></span></div>
+						<div class="steps-section__label" data-aos="fade" data-aos-delay="100" data-aos-duration="300"><?php the_sub_field( 'label' ); ?></div>
+						<div class="steps-section__title h3" data-aos="fade" data-aos-delay="200" data-aos-duration="300"><span><?php the_sub_field( 'title' ); ?></span></div>
 					</div>
 					<?php if ( have_rows( 'step_list' ) ) : ?>
 						<div class="steps-list">
 							<?php 
 							$counter = 0;
-							$delay = 0;
+							$delay = 200;
 							 ?>
 							<?php while ( have_rows( 'step_list' ) ) : the_row(); ?>
 								<div class="steps-list__item" data-aos="fade" data-aos-delay="<?php echo $delay; ?>" data-aos-duration="300" >

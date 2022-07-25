@@ -395,7 +395,20 @@
 		grid-template-columns:1fr;
 		grid-gap: 0;
 	}
+	&__item {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: column;
+	}
 	&__item-wrap {
+		-webkit-box-flex:1 1 auto;
+		-moz-box-flex: 1 1 auto;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
 		padding: 48px;
 		border-radius: 16px;
 		transition: all 0.2s ease 0s;
@@ -554,7 +567,9 @@
 }
 .wrap-burget-radio {
 	display: block;
-	@include mobile-sm {
-		display: none;
+	.wpcf7-form-control {
+		@include mobile-sm {
+			display: none !important;
+		}
 	}
 }
