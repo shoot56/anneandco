@@ -304,6 +304,25 @@
 			// }
 		}
 
+		$('.tooltip').tooltipster({
+			animation: 'fade',
+			delay: 200,
+			theme: 'tooltipster-anneco',
+			touchDevices: false,
+			position: 'top',
+			trigger: 'hover'
+		});
+		$('.menu-budget').on('change', function(event) {
+			let val = $(this).val();
+			$('input:radio[name="radio-budget"]').prop('checked', false);
+			$('input:radio[name="radio-budget"]').filter('[value="'+val+'"]').prop('checked', true);
+			
+		});
+		$('input:radio[name="radio-budget"]').on('change', function(event) {
+			let val = $(this).val();
+			$('.menu-budget').val(val);
+		});
+
 	});
 	// end document.ready
 

@@ -43,61 +43,48 @@ get_header();
 				?>
 			</div>
 		</div>
-		<?php if ( have_rows( 'follow_us' ) ) : ?>
-			<?php while ( have_rows( 'follow_us' ) ) : the_row(); ?>
-				<div class="contacts-section__social" data-aos="zoom-in" data-aos-delay="1000">
-					<div class="contacts-section__social-container">
-						<div class="contacts-section__social-info">
-							<div class="contacts-section__social-label h3"><?php the_sub_field( 'label' ); ?></div>
-						</div>
-						<?php if ( have_rows( 'social_links' ) ) : ?>
-							<div class="contacts-section__social-links social-list">
-								<?php while ( have_rows( 'social_links' ) ) : the_row(); ?>
-									<?php $icon = get_sub_field( 'icon' ); ?>
-									<?php if ( $icon ) : ?>
-										<a href="<?php the_sub_field( 'link' ); ?>" target="_blank" class="social-list__link contacts-section__social-link"><span class="link-text-description"><?php the_sub_field( 'link' ); ?></span><img src="<?php echo esc_url( $icon['url'] ); ?>" alt="<?php echo esc_attr( $icon['alt'] ); ?>" /></a>
-									<?php endif; ?>
-								<?php endwhile; ?>
-							</div>
-						<?php endif; ?>
-					</div>
-				</div>
-			<?php endwhile; ?>
-		<?php endif; ?>
+		
 	</div>
 </section>
-
-
-
-
 
 <?php if ( have_rows( 'steps_section' ) ) : ?>
 	<?php while ( have_rows( 'steps_section' ) ) : the_row(); ?>
 		<section class="steps-section">
-			<div class="container">
-				<div class="steps-section__title h2" data-aos="fade" data-aos-delay="0" data-aos-duration="300"><span><?php the_sub_field( 'title' ); ?></span></div>
-				<?php if ( have_rows( 'step_list' ) ) : ?>
-					<div class="steps-list">
-						<?php 
-						$counter = 0;
-						$delay = 0;
-						 ?>
-						<?php while ( have_rows( 'step_list' ) ) : the_row(); ?>
-							<div class="steps-list__item" data-aos="fade" data-aos-delay="<?php echo $delay; ?>" data-aos-duration="300" >
-								<?php 
-								$delay = $delay + 300;
-								$counter = $counter + 1; 
-								?>
-								<?php if ($counter <= 9): ?>
-									<div class="steps-list__num">0<?php echo $counter; ?></div>
-								<?php else: ?>
-									<div class="steps-list__num"><?php echo $counter; ?></div>
-								<?php endif ?>
-								<div class="steps-list__text"><?php the_sub_field( 'step_text' ); ?></div>
-							</div>
-						<?php endwhile; ?>
+			<div class="steps-section__frame">
+				<div class="container">
+					<div class="steps-section__head">
+						<div class="steps-section__label"><?php the_sub_field( 'label' ); ?></div>
+						<div class="steps-section__title h3" data-aos="fade" data-aos-delay="0" data-aos-duration="300"><span><?php the_sub_field( 'title' ); ?></span></div>
 					</div>
-				<?php endif; ?>
+					<?php if ( have_rows( 'step_list' ) ) : ?>
+						<div class="steps-list">
+							<?php 
+							$counter = 0;
+							$delay = 0;
+							 ?>
+							<?php while ( have_rows( 'step_list' ) ) : the_row(); ?>
+								<div class="steps-list__item" data-aos="fade" data-aos-delay="<?php echo $delay; ?>" data-aos-duration="300" >
+									<div class="steps-list__item-wrap">
+										<div class="steps-list__item-head">
+											<?php 
+											$delay = $delay + 300;
+											$counter = $counter + 1; 
+											?>
+											<?php if ($counter <= 9): ?>
+												<div class="steps-list__num">0<?php echo $counter; ?></div>
+											<?php else: ?>
+												<div class="steps-list__num"><?php echo $counter; ?></div>
+											<?php endif ?>
+											<div class="steps-list__item-title"><?php the_sub_field( 'step_title' ); ?></div>
+										</div>
+										<div class="steps-list__item-text"><?php the_sub_field( 'step_text' ); ?></div>
+									</div>
+
+								</div>
+							<?php endwhile; ?>
+						</div>
+					<?php endif; ?>
+				</div>
 			</div>
 		</section>
 	<?php endwhile; ?>

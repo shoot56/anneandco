@@ -380,6 +380,16 @@
 		display: flex;
 		width: 100%;
 	}
+	&--xs-wide {
+		@include mobile-sm {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			width: 100%;
+		}
+	}
 	&--sm {
 		font-size: 14px;
 		padding: 13px 24px;
