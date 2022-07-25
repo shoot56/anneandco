@@ -573,3 +573,75 @@
 		}
 	}
 }
+
+.contact-sended {
+	background-color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	border-radius: 8px;
+	&__wrap {
+		margin: auto;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	&__visual {
+		margin: 0 auto 40px;
+		width: 200px;
+		height: 200px;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		-webkit-box-flex:0 0 200px;
+		-moz-box-flex: 0 0 200px;
+		-webkit-flex: 0 0 200px;
+		-ms-flex: 0 0 200px;
+		flex: 0 0 200px;
+		position: relative;
+		lottie-player {
+			width: 360px;
+			height: 360px;
+			top: 50%;
+			left: 50%;
+			position: absolute;
+			margin: -180px 0 0 -180px;
+		}
+	}
+	&__title {
+		text-align: center;
+		font-size: 32px;
+		line-height: 32px;
+		margin: 0 0 8px;
+		color: $orange-color;
+		font-weight: bold;
+	}
+	&__text {
+		text-align: center;
+		max-width: 330px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&__button {
+		text-align: center;
+		margin-top: 24px;
+	}
+}
