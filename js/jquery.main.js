@@ -212,6 +212,48 @@
 		$(window).resize(lastPostCarousel);
 
 
+
+
+
+		function pricingSlider() {
+			let checkWidth = $(window).width();
+			let owlPost = $(".prices-wrap");
+			if (window.matchMedia("(min-width: 992px)").matches) {
+				if (typeof owlPost.data('owl.carousel') != 'undefined') {
+					owlPost.data('owl.carousel').destroy();
+				}
+				owlPost.removeClass('owl-carousel');
+			} else if (window.matchMedia("(max-width: 991px)").matches) {
+				owlPost.addClass('owl-carousel');
+				owlPost.owlCarousel({
+					loop:true,
+					items:1,
+					margin: 24,
+					nav:false,
+					center: true,
+					startPosition: 1,
+					autoplay:false,
+					dotsContainer: '.prices-switcher',
+					loop: false,
+					responsive:{
+						0:{
+							margin:8,
+						},
+						576:{
+ 							margin:24,
+						}
+					}
+				});
+			}
+			$('.prices-switcher__item').click(function () {
+				owlPost.trigger('to.owl.carousel', [$(this).index(), 300]);
+			});
+		}
+
+		pricingSlider();
+		$(window).resize(pricingSlider);
+
+
 		$('.full-slider').owlCarousel({
 			loop:true,
 			items:1,

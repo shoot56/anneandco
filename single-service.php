@@ -490,6 +490,34 @@ if (have_rows( 'price_section' )) {
 							<h2 class="service-price-section__title h2" data-aos="fade" data-aos-delay="300"><?php the_sub_field( 'section_title' ); ?></h2>
 							<div class="service-price-section__description" data-aos="fade" data-aos-delay="500"><?php the_sub_field( 'section_description' ); ?></div>
 						</div>
+
+						<div class="prices-switcher ">
+							<?php if (have_rows( 'starter' )): ?>
+								<?php while ( have_rows( 'starter' ) ) : the_row(); ?>
+									<div class="prices-switcher__item owl-dot">
+										<div class="prices-switcher__name"><?php the_sub_field( 'name' ); ?></div>
+										<div class="prices-switcher__price"><?php the_sub_field( 'price' ); ?></div>
+									</div>
+								<?php endwhile; ?>
+							<?php endif ?>
+							<?php if (have_rows( 'business' )): ?>
+								<?php while ( have_rows( 'business' ) ) : the_row(); ?>
+									<div class="prices-switcher__item owl-dot">
+										<div class="prices-switcher__name"><?php the_sub_field( 'name' ); ?></div>
+										<div class="prices-switcher__price"><?php the_sub_field( 'price' ); ?></div>
+									</div>
+								<?php endwhile; ?>
+							<?php endif ?>
+							<?php if (have_rows( 'custom' )): ?>
+								<?php while ( have_rows( 'custom' ) ) : the_row(); ?>
+									<div class="prices-switcher__item owl-dot">
+										<div class="prices-switcher__name"><?php the_sub_field( 'name' ); ?></div>
+										<div class="prices-switcher__price"><?php the_sub_field( 'price' ); ?></div>
+									</div>
+								<?php endwhile; ?>
+							<?php endif ?>
+						</div>
+
 						<?php $contactModalForm = get_sub_field( 'contact_modal_form_shortcode' ); ?>
 						<div class="prices-wrap">
 							<?php if ( have_rows( 'starter' ) ) : ?>
