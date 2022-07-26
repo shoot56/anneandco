@@ -2,6 +2,17 @@
 
 get_header();
 ?>
+<?php 
+$showPricing = false;
+if (have_rows( 'price_section' )) {
+	while ( have_rows( 'price_section' ) ) : the_row();
+		if (get_sub_field( 'show_section' ) == 1) {
+			$showPricing = true;
+		}
+	endwhile;
+}
+
+ ?>
 
 <div class="services-sections blog-article__progress">
 	<section class="services-head-section ">
@@ -102,6 +113,13 @@ get_header();
 							<div class="service-section-label" data-aos="fade" data-aos-delay="300">why</div>
 							<h2 class="h2 service-why-section__title" data-aos="fade" data-aos-delay="500"><?php the_sub_field( 'section_title' ); ?></h2>
 							<div class="service-why-section__text" data-aos="fade" data-aos-delay="700"><?php the_sub_field( 'section_description' ); ?></div>
+							<?php if ($showPricing): ?>
+								<div class="service-why-section__btn">
+									<a href="#" class="btn secondary-btn secondary-btn--blue jump-to" data-target=".service-price-section">
+										<span class="secondary-btn__text">See Pricing</span>
+									</a>
+								</div>
+							<?php endif ?>
 						</div>
 						<div class="grid-col grid-col--7 grid-col-sm--6 grid-col-xs--12 service-why-section__visual" data-aos="fade-left" data-aos-delay="800">
 							<?php $section_image = get_sub_field( 'section_image' ); ?>

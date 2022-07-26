@@ -934,6 +934,12 @@
 			max-width: 353px;
 		}
 	}
+	&__btn {
+		margin-top: 32px;
+		@include tablet {
+			margin-top: 24px;
+		}
+	}
 } 
 
 .all-services-section {
