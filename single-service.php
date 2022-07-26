@@ -110,11 +110,11 @@ if (have_rows( 'price_section' )) {
 				<div class="container">
 					<div class="grid-row">
 						<div class="grid-col grid-col--5 grid-col-sm--6 grid-col-xs--12 service-why-section__frame">
-							<div class="service-section-label" data-aos="fade" data-aos-delay="300">why</div>
-							<h2 class="h2 service-why-section__title" data-aos="fade" data-aos-delay="500"><?php the_sub_field( 'section_title' ); ?></h2>
-							<div class="service-why-section__text" data-aos="fade" data-aos-delay="700"><?php the_sub_field( 'section_description' ); ?></div>
+							<div class="service-section-label" data-aos="fade" data-aos-delay="200">why</div>
+							<h2 class="h2 service-why-section__title" data-aos="fade" data-aos-delay="400"><?php the_sub_field( 'section_title' ); ?></h2>
+							<div class="service-why-section__text" data-aos="fade" data-aos-delay="600"><?php the_sub_field( 'section_description' ); ?></div>
 							<?php if ($showPricing): ?>
-								<div class="service-why-section__btn">
+								<div class="service-why-section__btn" data-aos="fade" data-aos-delay="800">
 									<a href="#" class="btn secondary-btn secondary-btn--blue jump-to" data-target=".service-price-section">
 										<span class="secondary-btn__text">See Pricing</span>
 									</a>
