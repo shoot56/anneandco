@@ -308,6 +308,43 @@
 		.header-menu {
 			text-transform: uppercase;
 			font-size: 13px;
+			.menu-btn {
+				margin-left: 16px;
+				margin-right: 16px;
+				a {
+					font-weight: bold;
+					transition: all 0.3s;
+					span {
+						position: relative;
+					}
+					&:before {
+						content: '';
+						position: absolute;
+						top: -10px;
+						bottom: -10px;
+						left: -16px;
+						right: -16px;
+						border: 2px solid $navy-color;
+						border-radius: 2px;
+						transition: all 0.3s;
+						@include tablet {
+							display: none;
+						}
+					}
+					&:after {
+						display: none;
+						@include tablet {
+							display: block;
+						}
+					}
+					&:hover {
+						color: $white-color;
+						&:before {
+							background-color: $navy-color;
+						}
+					}
+				}
+			}
 		}
 		.header-menu .sub-menu-wrapper {
 			width: auto;
