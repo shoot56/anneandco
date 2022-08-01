@@ -2538,7 +2538,9 @@
 	background-color: #F7F9FF;
 	padding: 144px 0 40px;
 	position: relative;
-	overflow: hidden;
+	@include tablet {
+		overflow: hidden;
+	}
 	@include desktop {
 		padding-top: 112px;
 	}

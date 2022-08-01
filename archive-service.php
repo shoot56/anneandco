@@ -13,7 +13,7 @@ get_header();
 <section class="services-head-section">
     <div class="container">
         <div class="services-head-section__title">
-            <h1 class="services-head-section__h1 " data-aos="fade" data-aos-delay="600">
+            <h1 class="services-head-section__h1 " data-aos="fade" data-aos-delay="300">
                 <?php if ( have_rows( 'hero_title', 'option' ) ) : ?>
                     <?php while ( have_rows( 'hero_title', 'option' ) ) : the_row(); ?>
                         <div class="index-head-title__text">
@@ -41,7 +41,7 @@ get_header();
                 <?php endif; ?>
 
             </h1>
-            <div class="button" data-aos="fade" data-aos-delay="900">
+            <div class="button" data-aos="fade" data-aos-delay="600">
                 <a href="<?php the_field( 'video_url', 'option' ); ?>" data-fancybox="video-gallery" class="btn btn--sm-tab round-btn round-btn--cream round-btn--light">
                     <span class="round-btn__text">View Showcase</span>
                     <span class="round-btn__icon"><svg class="svg-icon" width="16" height="16"><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons.svg#icon-plus"></use></svg></span>
@@ -177,12 +177,12 @@ get_header();
     <?php while ( have_rows( 'process_section', 'option' ) ) : the_row(); ?>
         <section class="process-section">
             <div class="container">
-                <h2 class="process-section__title" data-aos="fade" data-aos-delay="400"><span><?php the_sub_field( 'section_title' ); ?></span></h2>
+                <h2 class="process-section__title" data-aos="fade" data-aos-delay="100"><span><?php the_sub_field( 'section_title' ); ?></span></h2>
                 <?php if ( have_rows( 'process_list' ) ) : ?>
                     <?php 
                     $counter = 0;
                     ?>
-                    <?php $dalayCount = 400; ?>
+                    <?php $dalayCount = 200; ?>
                     <div class="process-slider">
                         <?php while ( have_rows( 'process_list' ) ) : the_row(); ?>
                             <?php 
@@ -199,7 +199,7 @@ get_header();
                                     <div class="process-item__text"><?php the_sub_field( 'text' ); ?></div>
                                 </div>
                             </div>
-                            <?php $dalayCount = $dalayCount + 200; ?>
+                            <?php $dalayCount = $dalayCount + 100; ?>
                         <?php endwhile; ?>
                     </div>
                 <?php endif; ?>

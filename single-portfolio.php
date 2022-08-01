@@ -210,10 +210,10 @@ get_header( null, [ 'header_class' => 'site-header--work', 'header_color' => 'si
 <?php if ( have_rows( 'scope_of_work' ) ) : ?>
     <section class="scope-section">
         <div class="container">
-            <h3 class="scope-section__title" data-aos="fade" data-aos-delay="300" data-aos-duration="500">Scope of work</h3>
+            <h3 class="scope-section__title" data-aos="fade" data-aos-delay="100" data-aos-duration="300">Scope of work</h3>
             <div class="scope-grid">
                 <?php while ( have_rows( 'scope_of_work' ) ) : the_row(); ?>
-                    <div class="scope-grid__item" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="600">
+                    <div class="scope-grid__item" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="400">
                         <?php $titleContent = get_sub_field( 'title_content' ); ?>
                         <?php $title_link = get_sub_field( 'title_link' ); ?>
 
@@ -235,7 +235,7 @@ get_header( null, [ 'header_class' => 'site-header--work', 'header_color' => 'si
                 <?php endwhile; ?>
                 <?php if ( have_rows( 'output' ) ) : ?>
                     <?php while ( have_rows( 'output' ) ) : the_row(); ?>
-                        <div class="scope-grid__item scope-grid__item--output" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="600">
+                        <div class="scope-grid__item scope-grid__item--output" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="400">
                             <h4 class="scope-grid__title"><?php the_sub_field( 'title' ); ?></h4>
                             <div class="scope-grid__content">
                                 <?php the_sub_field( 'content' ); ?>

@@ -82,8 +82,8 @@ get_header();
 <section class="section-services">
 	<div class="container">
 		<div class="section-services__head">
-			<div class="section-services__label" data-aos="fade" data-aos-delay="200"><span>Services</span></div>
-			<h2 class="section-services__title" data-aos="fade" data-aos-delay="400">
+			<div class="section-services__label" data-aos="fade" data-aos-delay="100"><span>Services</span></div>
+			<h2 class="section-services__title" data-aos="fade" data-aos-delay="300">
 				<?php if ( have_rows( 'services_section' ) ) : ?>
 					<?php while ( have_rows( 'services_section' ) ) : the_row(); ?>
 						<?php the_sub_field( 'section_title' ); ?>
@@ -91,7 +91,7 @@ get_header();
 				<?php endif; ?>
 
 			</h2>
-			<div class="section-services__button" data-aos="fade" data-aos-delay="600">
+			<div class="section-services__button" data-aos="fade" data-aos-delay="400">
 				<a href="/services" class="btn btn--sm-mob teritiary-btn teritiary-btn--blue">
 					<span class="teritiary-btn__text">Learn More</span>
 					<span class="teritiary-btn__icon"><svg class="svg-icon" width="16" height="16"><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons.svg#icon-plus"></use></svg></span>
@@ -100,7 +100,7 @@ get_header();
 		</div>
 
 		<div class="grid-services">
-			<?php $delayCount = 500; ?>
+			<?php $delayCount = 300; ?>
 			<?php
 			global $post;
 			$tmp_post = $post;
@@ -124,7 +124,7 @@ get_header();
 					</div>
 					<div class="grid-services__frame"><?php the_field( 'service_excerpt', $post->ID ); ?></div>
 				</a>
-				<?php $delayCount = $delayCount + 200; ?>
+				<?php $delayCount = $delayCount + 100; ?>
 				<?php
 			}
 			$post = $tmp_post;
@@ -139,7 +139,7 @@ get_header();
 			<div class="container">
 				<?php $video_preview_image = get_sub_field( 'video_preview_image' ); ?>
 				<?php if ( $video_preview_image ) : ?>
-					<div class="team-section__video" data-aos="fade-up" data-aos-delay="400" data-aos-duration="600">
+					<div class="team-section__video" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">
 						<a class="team-section__play" data-fancybox="video-gallery" href="<?php the_sub_field( 'video_link' ); ?>">
 							<span class="team-section__play-text">Play Video</span>
 							<img src="<?php echo esc_url( $video_preview_image['url'] ); ?>" alt="<?php echo esc_attr( $video_preview_image['alt'] ); ?>" />
@@ -164,7 +164,7 @@ get_header();
 						<?php $delay_count = 0; ?>
 						<ul class="our-team-list">
 							<?php while ( have_rows( 'our_members' ) ) : the_row(); ?>
-								<?php $delay_count = $delay_count + 200; ?>
+								<?php $delay_count = $delay_count + 100; ?>
 								<?php $image = get_sub_field( 'image' ); ?>
 								<li class="our-team-list__item" data-aos="fade-up" data-aos-delay="<?php echo $delay_count; ?>" data-aos-duration="400" >
 									<div class="member-item">
