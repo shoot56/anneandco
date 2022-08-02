@@ -2,20 +2,9 @@
 
 
 .projects-section {
-	padding: 0px 0 28px;
+	padding: 0px 0 0;
 	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 264px, rgba(247,249,255,1) 264px);
-	@include desktop {
-		padding: 24px 0 40px;
-	}
-	@include desktop-992 {
-		padding: 33px 0;
-	}
-	@include mobile {
-		padding: 24px 0 32px;
-	}
-	@include mobile-sm {
-		padding: 24px 0;
-	}
+	
 }
 .index-projects {
 	display:-ms-grid;
@@ -27,13 +16,18 @@
 	position: relative;
 	@include desktop {
 		grid-gap: 56px;
+		padding-top: 104px;
 	}
 	@include desktop-992 {
-		padding-top: 95px;
+		padding-top: 88px;
 		grid-gap: 25px;
 	}
+	@include tablet {
+		grid-gap: 16px;
+		padding-top: 62px;
+	}
 	@include mobile {
-		padding-top: 72px;
+		padding-top: 62px;
 		grid-gap: 8px;
 	}
 	@include mobile-sm {
@@ -56,6 +50,9 @@
 		}
 		@include desktop-992 {
 			margin-top: -88px;
+		}
+		@include tablet {
+			margin-top: -72px;
 		}
 		@include mobile {
 			margin-top: -72px;
@@ -88,6 +85,8 @@
 	@include mobile-sm {
 		text-align: center;
 		padding: 16px 0 0;
+		font-size: 32px;
+		line-height: 46px;
 		br {
 			display: none;
 		}

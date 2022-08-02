@@ -11,19 +11,22 @@
 
 
 .section-services {
-	padding: 100px 0 120px;
+	padding: 128px 0 120px;
 	background-color: #fff;
 	@include desktop {
-		padding: 72px 0 112px;
+		padding: 112px 0 112px;
 	}
 	@include desktop-992 {
-		padding: 50px 0 80px;
+		padding: 80px 0 80px;
 	}
 	@include tablet {
-		padding: 31px 0 40px;
+		padding: 64px 0 64px;
 	}
 	@include mobile {
-		padding: 25px 0 44px;
+		padding: 48px 0 44px;
+	}
+	@include mobile-sm {
+		padding: 56px 0 44px;
 	}
 	&__head {
 		text-align: center;
@@ -49,7 +52,6 @@
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: 16px;
-			max-width: 90px;
 			font-size: 12px;
 		}
 		span {
