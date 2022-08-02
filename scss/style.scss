@@ -57,20 +57,20 @@
 			display: inline-block;
 			vertical-align: top;
 		}
-		&:before {
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: -8px;
-			width: 32px;
-			height: 32px;
-			background-color: #FCF5F2;
-			margin-top: -16px;
-			@include mobile {
-				height: 28px;
-				margin-top: -14px;
-			}
-		}
+		// &:before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: 50%;
+		// 	left: -8px;
+		// 	width: 32px;
+		// 	height: 32px;
+		// 	background-color: #FCF5F2;
+		// 	margin-top: -16px;
+		// 	@include mobile {
+		// 		height: 28px;
+		// 		margin-top: -14px;
+		// 	}
+		// }
 	}
 	&__title {
 		margin: 0 0 40px;

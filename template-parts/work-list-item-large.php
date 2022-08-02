@@ -1,7 +1,7 @@
 
 
 
-<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="work-list-item work-list-item--large work-list-item--<?php the_field( 'color_mode' ); ?>  <?php echo $args['class']; ?>" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="work-list-item work-list-item--large work-list-item--<?php the_field( 'color_mode' ); ?>  <?php echo $args['class']; ?>" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="work-list-item__visual">
         <?php if ( has_post_thumbnail()) { ?>
             <?php the_post_thumbnail('anneco-work-thumbnail-x2'); ?>

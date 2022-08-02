@@ -43,11 +43,14 @@ get_header();
 				<?php endwhile; ?>
 			<?php endif; ?>
 		</h1>
-		<div class="index-head-mobile-btn">
-			<a href="/work" class="btn btn--sm round-btn round-btn--cream">
-				<span class="round-btn__text">View Our Work</span>
-				<span class="round-btn__icon"><svg class="svg-icon" width="16" height="16"><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons.svg#icon-plus"></use></svg></span>
-			</a>
+		<div class="index-head-btn">
+			<div class="index-head-btn__arrow" data-aos="fade-right" data-aos-delay="1200" data-aos-duration="800"></div>
+			<div class="wrp" data-aos="fade" data-aos-delay="200">
+				<a href="/work" class="btn btn--sm-tab round-btn round-btn--light round-btn--nude">
+					<span class="round-btn__text">View Our Work</span>
+					<span class="round-btn__icon"><svg class="svg-icon" width="16" height="16"><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons.svg#icon-plus"></use></svg></span>
+				</a>
+			</div>
 		</div>
 		<div class="index-projects">
 			<?php
@@ -69,12 +72,7 @@ get_header();
 				}
 				wp_reset_postdata();
 			?>
-			<div class="index-projects__all" data-aos="fade" data-aos-delay="0">
-				<a href="/work" class="btn round-btn round-btn--cream round-btn--light">
-					<span class="round-btn__text">View Our Work</span>
-					<span class="round-btn__icon"><svg class="svg-icon" width="16" height="16"><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons.svg#icon-plus"></use></svg></span>
-				</a>
-			</div>
+			
 		</div>
 	</div>
 </section>
@@ -82,7 +80,7 @@ get_header();
 <section class="section-services">
 	<div class="container">
 		<div class="section-services__head">
-			<div class="section-services__label" data-aos="fade" data-aos-delay="100"><span>Services</span></div>
+			<div class="section-services__label" data-aos="fade" data-aos-delay="100"><span>Our Services</span></div>
 			<h2 class="section-services__title" data-aos="fade" data-aos-delay="300">
 				<?php if ( have_rows( 'services_section' ) ) : ?>
 					<?php while ( have_rows( 'services_section' ) ) : the_row(); ?>

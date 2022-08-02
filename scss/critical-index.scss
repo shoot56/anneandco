@@ -2,7 +2,7 @@
 
 
 .projects-section {
-	padding: 40px 0 80px;
+	padding: 0px 0 28px;
 	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 264px, rgba(247,249,255,1) 264px);
 	@include desktop {
 		padding: 24px 0 40px;
@@ -64,38 +64,30 @@
 			margin-top: 0;
 		}
 	}
-	&__all {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		@include mobile-sm {
-			display: none;
-		}
-	}
+	
 }
 .index-head-title {
 	margin: 0 0 40px;
 	max-width: 760px;
 	position: relative;
-	padding: 24px 0;
+	padding: 16px 0 0;
 	@include desktop {
 		max-width: 630px;
-		margin: 0 0 16px;
-		padding: 16px 0 16px 25px;
+		margin: 0 0 32px;
 	}
 	@include desktop-992 {
-		max-width: 580px;
+		max-width: 630px;
 	}
 	@include tablet {
 		max-width: 470px;
+		padding-top: 8px;
 	}
 	@include mobile {
-		padding: 8px 0 8px 24px;
 		margin-bottom: 32px;
 	}
 	@include mobile-sm {
 		text-align: center;
-		padding: 0;
+		padding: 16px 0 0;
 		br {
 			display: none;
 		}
@@ -109,34 +101,48 @@
 		background-size: 10px 40%;
 		background-repeat: repeat-x;
 		background-position: 0 90%;
-		// font-weight: normal;
 	}
 	&__after {
-		// font-weight: normal;
 		@include mobile-sm {
 			display: block;
 		}
 	}
-	&:before {
-		content: '';
+	
+}
+.index-head-btn {
+	margin: 0 0 16px;
+	position: relative;
+	padding-left: 88px;
+	@include tablet {
+		padding-left: 72px;
+	}
+	@include mobile {
+		padding-left: 64px;
+	}
+	@include mobile-sm {
+		padding-left: 0;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	&__arrow {
 		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: -48px;
-		border-left: 1px solid #E1E7FA;
-		@include desktop {
-			left: 0;
+		top: 50%;
+		left: 0;
+		width: 65px;
+		height: 16px;
+		margin-top: -8px;
+		background-repeat: no-repeat;
+		background-image: url("data:image/svg+xml,%3Csvg width='65' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M64.707 8.707a1 1 0 0 0 0-1.414L58.343.929a1 1 0 1 0-1.414 1.414L62.586 8l-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364ZM0 9h64V7H0v2Z' fill='%23D9E2FF'/%3E%3C/svg%3E");
+		@include tablet {
+			background-size: contain;
+			background-position: 50% 50%;
+			width: 56px;
+		}
+		@include mobile {
+			width: 48px;
 		}
 		@include mobile-sm {
 			display: none;
 		}
-	}
-}
-.index-head-mobile-btn {
-	display: none;
-	text-align: center;
-	margin: 0 0 32px;
-	@include mobile-sm {
-		display: block;
 	}
 }
