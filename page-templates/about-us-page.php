@@ -14,8 +14,8 @@ get_header();
 			<div class="container">
 				<div class="about-us-hero-section__wrap grid-row">
 					<div class="about-us-hero-section__frame grid-col--4 grid-col-md--12">
-						<h1 class="about-us-hero-section__title" data-aos="fade" data-aos-delay="800"><?php the_sub_field( 'page_title' ); ?></h1>
-						<div class="about-us-hero-section__button"  data-aos="fade" data-aos-delay="1000">
+						<h1 class="about-us-hero-section__title" data-aos="fade" data-aos-delay="300"><?php the_sub_field( 'page_title' ); ?></h1>
+						<div class="about-us-hero-section__button"  data-aos="fade" data-aos-delay="500">
 							<a href="#" class="btn btn--sm-tab round-btn round-btn--cream round-btn--light jump-to" data-target=".our-info-section">
 			                    <span class="round-btn__text">Learn More</span>
 			                    <span class="round-btn__icon"><svg class="svg-icon" width="16" height="16"><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons.svg#icon-arrow-down"></use></svg></span>
@@ -24,7 +24,7 @@ get_header();
 					</div>
 					<div class="about-us-hero-section__visual grid-col--8 grid-col-md--12">
 						<?php if ( $promo_image ) : ?>
-							<div class="about-us-hero-section__img" data-aos="zoom-in" data-aos-delay="1200">
+							<div class="about-us-hero-section__img" data-aos="zoom-in" data-aos-delay="700">
 								<img src="<?php echo esc_url( $promo_image['url'] ); ?>" alt="<?php echo esc_attr( $promo_image['alt'] ); ?>" />
 							</div>
 						<?php endif; ?>
@@ -41,7 +41,7 @@ get_header();
 			<div class="container">
 				<div class="our-info-section__wrap grid-row">
 					<div class="our-info-section__frame grid-col--4 grid-col-md--12">
-						<div class="our-info-section__aside" data-aos="fade" data-aos-delay="600">
+						<div class="our-info-section__aside" data-aos="fade" data-aos-delay="500">
 							<h2 class="our-info-section__title h2"><?php the_sub_field( 'section_title' ); ?></h2>
 							<?php if (get_sub_field( 'section_description' )): ?>
 								<div class="our-info-section__description"><?php the_sub_field( 'section_description' ); ?></div>
@@ -50,7 +50,7 @@ get_header();
 					</div>
 					<?php if ( have_rows( 'info_columns' ) ) : ?>
 						<div class="our-info-list grid-col--8 grid-col-md--12">
-							<?php $delayCount = 500; ?>
+							<?php $delayCount = 300; ?>
 							<?php while ( have_rows( 'info_columns' ) ) : the_row(); ?>
 								<?php $icon = get_sub_field( 'icon' ); ?>
 								<div class="our-info-list__item" data-aos="fade-left" data-aos-delay="<?php echo $delayCount; ?>">
@@ -62,7 +62,7 @@ get_header();
 									<h5 class="our-info-list__name"><?php the_sub_field( 'title' ); ?></h5>
 									<div class="our-info-list__text"><?php the_sub_field( 'text' ); ?></div>
 								</div>
-								<?php $delayCount = $delayCount + 200; ?>
+								<?php $delayCount = $delayCount + 100; ?>
 							<?php endwhile; ?>
 						</div>
 					<?php endif; ?>
@@ -88,9 +88,9 @@ get_header();
 					<div class="location-section__wrap grid-row">
 						<div class="location-section__frame grid-col--4 grid-col-lg--5 grid-col-md--4  grid-col-sm--12">
 							<div class="location-section__block">
-								<h2 class="location-section__title" data-aos="fade" data-aos-delay="400"><?php the_sub_field( 'section_title' ); ?></h2>
-								<div class="location-section__text" data-aos="fade" data-aos-delay="600"><?php the_sub_field( 'section_description' ); ?></div>
-								<div class="location-section__button" data-aos="fade" data-aos-delay="800">
+								<h2 class="location-section__title" data-aos="fade" data-aos-delay="200"><?php the_sub_field( 'section_title' ); ?></h2>
+								<div class="location-section__text" data-aos="fade" data-aos-delay="400"><?php the_sub_field( 'section_description' ); ?></div>
+								<div class="location-section__button" data-aos="fade" data-aos-delay="600">
 									<?php if ( $button ) : ?>
 										<a></a>
 										<a href="<?php echo esc_url( $button['url'] ); ?>" target="<?php echo esc_attr( $button['target'] ); ?>" class="btn secondary-btn secondary-btn--navy">
@@ -103,7 +103,7 @@ get_header();
 						</div>
 						<div class="location-section__map grid-col--8 grid-col-lg--7 grid-col-md--8 grid-col-sm--12">
 							<?php if ( $map ) : ?>
-								<div class="acf-map" data-aos="zoom-in" data-aos-delay="1000" data-zoom="<?php echo $map['zoom']; ?>">
+								<div class="acf-map" data-aos="zoom-in" data-aos-delay="600" data-zoom="<?php echo $map['zoom']; ?>">
 									<div class="marker" data-lat="<?php echo esc_attr($map['lat']); ?>" data-lng="<?php echo esc_attr($map['lng']); ?>">
 										<h4>anne+co</h4>
 										<p><?php echo esc_html( $map['address'] ); ?></p>
@@ -123,20 +123,22 @@ get_header();
 		<section class="client-logos-section">
 			<div class="container">
 				<div class="client-logos-section__head">
-					<div class="client-logos-section__label" data-aos="fade" data-aos-delay="400"><?php the_sub_field( 'section_label' ); ?></div>
-					<h3 class="client-logos-section__title" data-aos="fade" data-aos-delay="600"><?php the_sub_field( 'section_title' ); ?></h3>
+					<div class="client-logos-section__label" data-aos="fade" data-aos-delay="200"><?php the_sub_field( 'section_label' ); ?></div>
+					<h3 class="client-logos-section__title" data-aos="fade" data-aos-delay="400"><?php the_sub_field( 'section_title' ); ?></h3>
 				</div>
 				<?php if ( have_rows( 'logo_list' ) ) : ?>
 					<div class="client-logos-grid">
-						<?php $delayCount = 300; ?>
+						<?php $delayCount = 100; ?>
 						<?php while ( have_rows( 'logo_list' ) ) : the_row(); ?>
 							<?php $logo_image = get_sub_field( 'logo_image' ); ?>
 							<?php if ( $logo_image ) : ?>
-								<div class="client-logos-grid__item" data-aos="fade" data-aos-delay="<?php echo $delayCount; ?>">
-									<img src="<?php echo esc_url( $logo_image['url'] ); ?>" alt="<?php echo esc_attr( $logo_image['alt'] ); ?>" />
+								<div class="client-logos-grid__wrap" data-aos="fade" data-aos-delay="<?php echo $delayCount; ?>">
+									<div class="client-logos-grid__item">
+										<img src="<?php echo esc_url( $logo_image['url'] ); ?>" alt="<?php echo esc_attr( $logo_image['alt'] ); ?>" />
+									</div>
 								</div>
 							<?php endif; ?>
-							<?php $delayCount = $delayCount + 200; ?>
+							<?php $delayCount = $delayCount + 100; ?>
 						<?php endwhile; ?>
 					</div>
 				<?php endif; ?>
@@ -155,7 +157,7 @@ $frontpage_id = get_option( 'page_on_front' );
 				<div class="container">
 					<?php $video_preview_image = get_sub_field( 'video_preview_image' ); ?>
 					<?php if ( $video_preview_image ) : ?>
-						<div class="team-section__video"  data-aos="fade-up" data-aos-delay="400">
+						<div class="team-section__video"  data-aos="fade-up" data-aos-delay="300">
 							<a class="team-section__play" data-fancybox="video-gallery" href="<?php the_sub_field( 'video_link' ); ?>">
 								<span class="team-section__play-text">Play Video</span>
 								<img src="<?php echo esc_url( $video_preview_image['url'] ); ?>" alt="<?php echo esc_attr( $video_preview_image['alt'] ); ?>" />
@@ -164,14 +166,14 @@ $frontpage_id = get_option( 'page_on_front' );
 					<?php endif; ?>
 					<div class="team-section__frame">
 						<div class="team-section__header team-section__header--center">
-							<h3 class="" data-aos="fade" data-aos-delay="600"><?php the_sub_field( 'section_title' ); ?></h3>
+							<h3 class="" data-aos="fade" data-aos-delay="400"><?php the_sub_field( 'section_title' ); ?></h3>
 							
 						</div>
 						<?php if ( have_rows( 'our_members' ) ) : ?>
 							<?php $delay_count = 0; ?>
 							<ul class="our-team-list">
 								<?php while ( have_rows( 'our_members' ) ) : the_row(); ?>
-									<?php $delay_count = $delay_count + 200; ?>
+									<?php $delay_count = $delay_count + 100; ?>
 									<?php $image = get_sub_field( 'image' ); ?>
 									<li class="our-team-list__item " data-aos="fade-up" data-aos-delay="<?php echo $delay_count; ?>">
 										<div class="member-item">
@@ -215,13 +217,13 @@ $frontpage_id = get_option( 'page_on_front' );
 				<div class="offer-section__wrap  grid-row">
 					<div class="offer-section__aside grid-col--5 grid-col-xl--4 grid-col-md--12">
 						<div class="offer-section__head">
-							<h3 class="offer-section__title" data-aos="fade" data-aos-delay="600"><?php the_sub_field( 'section_title' ); ?></h3>
-							<div class="offer-section__text" data-aos="fade" data-aos-delay="800"><?php the_sub_field( 'section_description' ); ?></div>
+							<h3 class="offer-section__title" data-aos="fade" data-aos-delay="200"><?php the_sub_field( 'section_title' ); ?></h3>
+							<div class="offer-section__text" data-aos="fade" data-aos-delay="400"><?php the_sub_field( 'section_description' ); ?></div>
 						</div>
 					</div>
 					<div class="offer-section__frame grid-col--7 grid-col-xl--8 grid-col-md--12">
 						<?php if ( have_rows( 'offer_items' ) ) : ?>
-							<?php $delayCount = 1000; ?>
+							<?php $delayCount = 400; ?>
 							<div class="offer-items-grid">
 								<?php while ( have_rows( 'offer_items' ) ) : the_row(); ?>
 									<?php $icon = get_sub_field( 'icon' ); ?>
@@ -236,7 +238,7 @@ $frontpage_id = get_option( 'page_on_front' );
 											<div class="offer-items-grid__text"><?php the_sub_field( 'text' ); ?></div>
 										</div>
 									</div>
-									<?php $delayCount = $delayCount + 200; ?>
+									<?php $delayCount = $delayCount + 100; ?>
 								<?php endwhile; ?>
 							</div>
 						<?php endif; ?>

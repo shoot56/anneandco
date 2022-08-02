@@ -61,7 +61,7 @@ if ($page == 1) {
 		));
 		?>
 		<div class="article-section__head " >
-			<div class="article-section__filter" data-aos="fade" data-aos-delay="1000">
+			<div class="article-section__filter" data-aos="fade" data-aos-delay="200">
 				<?php
 					$terms = get_terms( 'category' );
 
@@ -75,7 +75,7 @@ if ($page == 1) {
 					}
 				?>
 			</div>
-			<div class="article-section__search" data-aos="fade" data-aos-delay="1100">
+			<div class="article-section__search" data-aos="fade" data-aos-delay="400">
 				<?php get_search_form(); ?>
 			</div>
 		</div>
@@ -93,7 +93,7 @@ if ($page == 1) {
 						} else {
 							$params = ['class' => '' ];
 						}
-						?> <div class="blog-article-list__item" data-aos="fade-up" data-aos-delay="1200"> <?php 
+						?> <div class="blog-article-list__item" data-aos="fade-up" data-aos-delay="500"> <?php 
 							get_template_part( 'template-parts/blog-list-item-v2', get_post_type(), $params );
 						?> </div> <?php
 					endwhile;
