@@ -4427,6 +4427,7 @@ body.error404 {
 		}
 		.article-list-item__visual-bg {
 			background-color: rgba($navy-color, .7);
+			transform: scale(1.1);
 		}
 		.article-tag-list__item {
 			color: $navy-color;
@@ -4438,6 +4439,11 @@ body.error404 {
 		.article-list-item__footer {
 			color: $navy-color;
 		}
+		.article-list-item__visual {
+			img {
+				transform: scale(1.1);
+			}
+		}
 	}
 	&__visual {
 		position: relative;
@@ -4445,7 +4451,7 @@ body.error404 {
 		padding-bottom: 60.41%;
 		background-color: #aaa;
 		border-radius: 8px;
-		
+		overflow: hidden;
 		&-bg {
 			position: absolute;
 			top: 0;
@@ -4457,7 +4463,7 @@ body.error404 {
 			width: 100%;
 			height: 100%;
 			border-radius: 8px;
-			transition: all 0.2s ease 0s;
+			transition: all 0.3s ease 0s;
 		}
 		img {
 			position: absolute;
@@ -4467,6 +4473,7 @@ body.error404 {
 			height: 100%;
 			object-fit: cover;
 			border-radius: 8px;
+			transition: all 0.3s ease 0s;
 		}
 	}
 	&__frame {
