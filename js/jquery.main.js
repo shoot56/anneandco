@@ -93,6 +93,7 @@
 			lazyLoad:true,
 			autoHeight: false,
 			animateOut: 'fadeOut',
+			autoplayHoverPause: true,
 			autoplay: true,
 			autoplayTimeout: 4000,
 		});
