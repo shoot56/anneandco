@@ -310,6 +310,7 @@
 		}
 
 		document.addEventListener( 'wpcf7mailsent', function( event ) {
+			console.log(event);
 			if ( '131' == event.detail.contactFormId || '2020' == event.detail.contactFormId ) {
 				var $form = $('#' + event.detail.unitTag);
 				$('.contact-form-wrap').addClass('form-sent');
@@ -340,7 +341,7 @@
 				}
 				
 			} 
-			if ( '1635' == event.detail.contactFormId ) {
+			if ( '1635' == event.detail.contactFormId || '2009' == event.detail.contactFormId || '2274' == event.detail.contactFormId || '2325' == event.detail.contactFormId || '2326' == event.detail.contactFormId ) {
 				var $form = $('#' + event.detail.unitTag);
 				$form.find('.wpcf7-response-output').hide();
 				$form.append('<span class="form-sended"><span class="form-sended__wrap"><span class="form-sended__visual"><svg width="64" height="38" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.066 2.467c0-1.178.956-2.133 2.134-2.133h42.666C63.044.334 64 1.289 64 2.467v16a2.133 2.133 0 1 1-4.267 0V4.601h-38.4v27.733h19.2a2.133 2.133 0 1 1 0 4.266H19.2a2.133 2.133 0 0 1-2.134-2.133v-32ZM63.2 23.201c.92.736 1.07 2.078.333 2.998L55 36.867A2.133 2.133 0 0 1 52 37.2l-5.333-4.266a2.133 2.133 0 1 1 2.665-3.332l3.668 2.934 7.2-9A2.133 2.133 0 0 1 63.2 23.2ZM12.8 6.734H7.604c-1.394 0-2.535 1.152-2.535 2.56 0 1.408 1.14 2.56 2.535 2.56h5.07v-3.84c0-.32.04-.625.082-.937l.044-.343Zm0 25.6-.044-.342a6.97 6.97 0 0 1-.083-.938v-3.84H2.535c-1.4 0-2.535 1.152-2.535 2.56 0 1.408 1.136 2.56 2.535 2.56H12.8Zm-10.265-12.8c0-1.408 1.14-2.56 2.534-2.56h7.604v5.12H5.07c-1.394 0-2.534-1.152-2.534-2.56Z" fill="#215FE5"/><path fill-rule="evenodd" clip-rule="evenodd" d="M17.493 1.187A2.133 2.133 0 0 1 20.48.761L40.533 15.8 60.586.76a2.133 2.133 0 1 1 2.56 3.413l-21.333 16a2.133 2.133 0 0 1-2.56 0l-21.333-16a2.133 2.133 0 0 1-.427-2.987Z" fill="#215FE5"/></svg></span><span class="form-sended__title">Success!</span><span class="form-sended__text">Thank you for your message. We will be in contact very soon.</span></span></span>');

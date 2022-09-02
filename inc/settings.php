@@ -330,4 +330,3 @@ function custom_sort_last_login_column( $query ) {
 }
 
 
-add_filter('wpcf7_spam', '__return_false');
