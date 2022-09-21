@@ -119,10 +119,6 @@ get_header('landing-linkedin');
 
 <?php if ( have_rows( 'contact_section' ) ) : ?>
 	<?php while ( have_rows( 'contact_section' ) ) : the_row(); ?>
-		
-		
-		
-		
 		<section class="lp-contact-section">
 			<div class="container">
 				<div class="lp-contact-section__wrap">
@@ -131,7 +127,7 @@ get_header('landing-linkedin');
 						<h2 class="lp-contact-section__title h2" data-aos="fade" data-aos-delay="600"><?php the_sub_field( 'title' ); ?></h2>
 						<?php if ( have_rows( 'contact_information' ) ) : ?>
 
-							<div class="contact-info__list" data-aos="fade-right" data-aos-delay="800">
+							<div class="contact-info__list contacts-list" data-aos="fade-right" data-aos-delay="800">
 
 								<?php while ( have_rows( 'contact_information' ) ) : the_row(); ?>
 									<?php $icon = get_sub_field( 'item_icon' ); ?>

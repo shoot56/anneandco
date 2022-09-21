@@ -568,6 +568,16 @@
 			box-shadow: inset 0 0 0 2px $cream-color;
 		}
 	}
+	&--filled-blue {
+		background-color: $blue-color;
+		color: $white-color;
+		box-shadow: inset 0 0 0 2px $blue-color;
+		&:hover {
+			background-color: $cream-color;
+			color: $navy-color;
+			box-shadow: inset 0 0 0 2px $cream-color;
+		}
+	}
 	&--cream {
 		box-shadow: inset 0 0 0 2px $cream-color;
 		color: $cream-color;
@@ -1226,4 +1236,165 @@
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 0a8 8 0 1 0 .001 16.001A8 8 0 0 0 8 0Zm0 14.643A6.644 6.644 0 0 1 8 1.357a6.644 6.644 0 0 1 0 13.286Z' fill='%23CCC'/%3E%3Cpath d='M10.026 4.239A3.059 3.059 0 0 0 8 3.5c-.762 0-1.48.263-2.025.739-.566.495-.878 1.16-.878 1.874v.138c0 .08.065.145.145.145h.87c.08 0 .146-.065.146-.145v-.138c0-.8.782-1.452 1.742-1.452s1.742.652 1.742 1.452c0 .564-.4 1.081-1.018 1.32a2.028 2.028 0 0 0-1.307 1.919v.39c0 .08.066.145.146.145h.87c.08 0 .146-.065.146-.145V9.33a.876.876 0 0 1 .56-.813c1.071-.412 1.762-1.355 1.762-2.404.002-.713-.31-1.38-.876-1.874Zm-2.75 7.535a.726.726 0 1 0 1.45 0 .726.726 0 0 0-1.45 0Z' fill='%23999'/%3E%3C/svg%3E");
+}
+.contacts-list {
+	margin: 0;
+	display:-ms-grid;
+	display:grid;
+	-ms-grid-columns:1fr;
+	grid-template-columns:1fr;
+	grid-gap: 24px;
+}
+.contact-item {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: $navy-color;
+	&--sm {
+		font-size: 16px;
+		line-height: 24px;
+		max-width: 410px;
+		.contact-item__visual {
+			-webkit-box-flex:0 0 72px;
+			-moz-box-flex: 0 0 72px;
+			-webkit-flex: 0 0 72px;
+			-ms-flex: 0 0 72px;
+			flex: 0 0 72px;
+			max-width: 72px;
+			height: 72px;
+			box-shadow: none;
+			background: #FFFFFF;
+			border: 1px solid #EDF1FA;
+			border-radius: 4px;
+			margin-right: 12px;
+			@include desktop-992 {
+				margin: 0;
+			}
+			@include mobile {
+				-webkit-box-flex:0 0 64px;
+				-moz-box-flex: 0 0 64px;
+				-webkit-flex: 0 0 64px;
+				-ms-flex: 0 0 64px;
+				flex: 0 0 64px;
+				max-width: 64px;
+				height: 64px;
+			}
+			.style-svg,
+			img {
+				width: 40px;
+				height: 40px;
+			}
+		}
+		.contact-item__label {
+			color: $navy-color;
+			font-size: 12px;
+			letter-spacing: 0.1em;
+			font-weight: normal;
+		}
+		.contact-item__text {
+			font-weight: 500;
+		}
+		@include desktop-992 {
+			.contact-item__frame {
+				display: none;
+			}
+		}
+	}
+	&:hover {
+		.contact-item__visual {
+			background-color: #DADFF2;
+			box-shadow: none;
+		}
+		.contact-item__text {
+			color: $blue-color;
+			text-decoration: underline;
+		}
+	}
+	&__visual {
+		-webkit-box-flex:0 0 88px;
+		-moz-box-flex: 0 0 88px;
+		-webkit-flex: 0 0 88px;
+		-ms-flex: 0 0 88px;
+		flex: 0 0 88px;
+		max-width: 88px;
+		height: 88px;
+		background: #FFFFFF;
+		box-shadow: -105.228px 165.358px 143px rgba(0, 0, 0, 0.04), -68.2031px 107.176px 83.7477px rgba(0, 0, 0, 0.0303704), -40.5321px 63.6933px 45.5481px rgba(0, 0, 0, 0.0242963), -21.0455px 33.0715px 23.2375px rgba(0, 0, 0, 0.02), -8.5741px 13.4736px 11.6519px rgba(0, 0, 0, 0.0157037), -1.94866px 3.06218px 5.62732px rgba(0, 0, 0, 0.00962963);
+		border-radius: 8px;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0 24px 0 0;
+		transition: all 0.2s;
+		@include desktop-992 {
+			-webkit-box-flex:0 0 64px;
+			-moz-box-flex: 0 0 64px;
+			-webkit-flex: 0 0 64px;
+			-ms-flex: 0 0 64px;
+			flex: 0 0 64px;
+			max-width: 64px;
+			height: 64px;
+			margin-right: 16px;
+			.style-svg,
+			img {
+				width: 32px;
+				height: 32px;
+			}
+		}
+	}
+	&__frame {
+		flex: 1 1 auto;
+		min-width: 0;
+	}
+	&__label {
+		color: #666;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 1;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		margin: 0 0 6px;
+	}
+	&__text {
+		transition: all 0.2s;
+		font-weight: normal;
+	}
+}
+
+.submit-btn-right {
+	position: relative;
+	text-align: right;
+	.wpcf7-spinner {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin:0;
+	}
+}
+.form-agreement-text {
+	margin: 0 0 16px;
+	max-width: 256px;
+	font-weight: 300;
+	font-size: 10px;
+	line-height: 1.4;
+	p {
+		margin: 0;
+	}
+	a {
+		text-decoration: underline;
+		color: inherit;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }

@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.1.13' );
+	define( '_S_VERSION', '1.2.0' );
 }
 
 
@@ -198,6 +198,9 @@ function anneco_scripts() {
 	if(is_page_template('page-templates/contact-page.php')) {
 		wp_enqueue_style( 'tooltipster', get_template_directory_uri() . '/css/tooltipster.css', array(), filemtime(get_template_directory() . '/css/tooltipster.css') );
 		wp_enqueue_style( 'contact-style', get_template_directory_uri() . '/css/contact-page.css', array(), filemtime(get_template_directory() . '/css/contact-page.css') );
+	}
+	if(is_page_template('page-templates/cloud-landing-page.php')) {
+		wp_enqueue_style( 'landing-google-style', get_template_directory_uri() . '/css/landing-ggle.css', array(), filemtime(get_template_directory() . '/css/landing-ggle.css') );
 	}
 	if (is_singular('post')) {
 		wp_enqueue_style( 'blog-article', get_template_directory_uri() . '/css/blog-article.css', array(), filemtime(get_template_directory() . '/css/blog-article.css') );

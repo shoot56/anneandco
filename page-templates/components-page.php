@@ -437,6 +437,9 @@ get_header();
 				<a href="#" class="btn secondary-btn secondary-btn--filled-white">
 					<span class="secondary-btn__text">Button</span>
 				</a>
+				<a href="#" class="btn secondary-btn secondary-btn--filled-blue">
+					<span class="secondary-btn__text">Button</span>
+				</a>
 			</div>
 
 			<div class="components-section__subtitle">Secondary Button with Icon</div>
@@ -466,6 +469,10 @@ get_header();
 					<span class="secondary-btn__icon"><svg class="svg-icon" width="16" height="16"><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons.svg#icon-plus"></use></svg></span>
 				</a>
 				<a href="#" class="btn secondary-btn secondary-btn--filled-white">
+					<span class="secondary-btn__text">Button</span>
+					<span class="secondary-btn__icon"><svg class="svg-icon" width="16" height="16"><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons.svg#icon-arrow-up-right"></use></svg></span>
+				</a>
+				<a href="#" class="btn secondary-btn secondary-btn--filled-blue">
 					<span class="secondary-btn__text">Button</span>
 					<span class="secondary-btn__icon"><svg class="svg-icon" width="16" height="16"><use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons.svg#icon-arrow-up-right"></use></svg></span>
 				</a>
