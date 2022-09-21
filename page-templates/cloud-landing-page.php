@@ -53,8 +53,10 @@ get_header('landing-google');
 						<?php $delay = 200; ?>
 						<?php while ( have_rows( 'cases_list' ) ) : the_row(); ?>
 							<?php $case_image = get_sub_field( 'case_image' ); ?>
+							<?php $case_item = get_sub_field( 'case_item' ); ?>
+							
 							<li class="lp-ggl-cases-list__item" data-aos="fade-up" data-aos-delay="<? echo $delay;?>">
-								<a href="<?php the_permalink(); ?>" target="_blank" class="lp-ggl-cases-list__link">
+								<a href="<?php echo get_permalink( $case_item ); ?>" target="_blank" class="lp-ggl-cases-list__link">
 									<div class="lp-ggl-cases-list__visual">
 									<?php if ( $case_image ) : ?>
 										<img src="<?php echo esc_url( $case_image['url'] ); ?>" alt="<?php echo esc_attr( $case_image['alt'] ); ?>" />
