@@ -56,7 +56,7 @@ get_header('landing-google');
 							<?php $case_item = get_sub_field( 'case_item' ); ?>
 							
 							<li class="lp-ggl-cases-list__item" data-aos="fade-up" data-aos-delay="<? echo $delay;?>">
-								<a href="<?php echo get_permalink( $case_item ); ?>" target="_blank" class="lp-ggl-cases-list__link">
+								<div class="lp-ggl-cases-list__link">
 									<div class="lp-ggl-cases-list__visual">
 									<?php if ( $case_image ) : ?>
 										<img src="<?php echo esc_url( $case_image['url'] ); ?>" alt="<?php echo esc_attr( $case_image['alt'] ); ?>" />
@@ -66,7 +66,7 @@ get_header('landing-google');
 										<h3 class="lp-ggl-cases-list__title"><?php the_sub_field( 'case_name' ); ?></h3>
 										<div class="lp-ggl-cases-list__description"><?php the_sub_field( 'case_description' ); ?></div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<?php $delay = $delay + 100; ?>
 						<?php endwhile; ?>

@@ -279,14 +279,7 @@
 		@include mobile-sm {
 			flex-direction: column;
 		}
-		&:hover {
-			.lp-ggl-cases-list__visual img {
-				transform: scale(1.1);
-			}
-			.lp-ggl-cases-list__title {
-				color: $blue-color;
-			}
-		}
+		
 	}
 	&__visual {
 		position: relative;
