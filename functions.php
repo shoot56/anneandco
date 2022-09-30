@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.2.3' );
+	define( '_S_VERSION', '1.2.4' );
 }
 
 
@@ -201,6 +201,11 @@ function anneco_scripts() {
 	}
 	if(is_page_template('page-templates/cloud-landing-page.php')) {
 		wp_enqueue_style( 'landing-google-style', get_template_directory_uri() . '/css/landing-ggle.css', array(), filemtime(get_template_directory() . '/css/landing-ggle.css') );
+	}
+	if(is_page_template('page-templates/landing-ux-ui-page.php')) {
+		// wp_enqueue_style( 'landing-google-style', get_template_directory_uri() . '/css/landing-ggle.css', array(), filemtime(get_template_directory() . '/css/landing-ggle.css') );
+		wp_enqueue_style( 'services', get_template_directory_uri() . '/css/services.css', array(), filemtime(get_template_directory() . '/css/services.css') );
+		wp_enqueue_style( 'landing-uxui-style', get_template_directory_uri() . '/css/landing-uxui.css', array(), filemtime(get_template_directory() . '/css/landing-uxui.css') );
 	}
 	if (is_singular('post')) {
 		wp_enqueue_style( 'blog-article', get_template_directory_uri() . '/css/blog-article.css', array(), filemtime(get_template_directory() . '/css/blog-article.css') );

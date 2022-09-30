@@ -74,6 +74,7 @@ function ea_disable_editor( $id = false ) {
 		'page-templates/landing-chocolate.php',
 		'page-templates/landing-linkedin.php',
 		'page-templates/cloud-landing-page.php',
+		'page-templates/landing-ux-ui-page.php',
 		'page-templates/about-us-page.php',
 	);
 	$excluded_ids = array(
