@@ -202,6 +202,9 @@ function anneco_scripts() {
 	if(is_page_template('page-templates/cloud-landing-page.php')) {
 		wp_enqueue_style( 'landing-google-style', get_template_directory_uri() . '/css/landing-ggle.css', array(), filemtime(get_template_directory() . '/css/landing-ggle.css') );
 	}
+	if(is_page_template('page-templates/copywriting-landing-page.php')) {
+		wp_enqueue_style( 'landing-copywriting-style', get_template_directory_uri() . '/css/landing-copywriting.css', array(), filemtime(get_template_directory() . '/css/landing-copywriting.css') );
+	}
 	if(is_page_template('page-templates/landing-ux-ui-page.php')) {
 		// wp_enqueue_style( 'landing-google-style', get_template_directory_uri() . '/css/landing-ggle.css', array(), filemtime(get_template_directory() . '/css/landing-ggle.css') );
 		wp_enqueue_style( 'services', get_template_directory_uri() . '/css/services.css', array(), filemtime(get_template_directory() . '/css/services.css') );
