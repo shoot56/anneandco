@@ -488,14 +488,20 @@
 	-ms-grid-columns:repeat(4, 1fr);
 	grid-template-columns:repeat(4, 1fr);
 	grid-gap: 24px;
+	display: flex;
+	flex-wrap: wrap;
+	gap:24px;
+	justify-content: center;
 	max-width: 1096px;
 	margin-left: auto;
 	margin-right: auto;
 	@include desktop-992 {
 		grid-gap: 16px;
+		gap:16px;
 	}
 	@include tablet {
 		grid-gap: 8px;
+		gap:8px;
 	}
 	@include mobile {
 		display: flex;
@@ -514,6 +520,7 @@
 		display: -webkit-flex;
 		display: flex;
 		flex-direction: column;
+		flex: 0 1 23%;
 		@include mobile {
 			flex: 0 0 33.3%;
 			max-width: 33.3%;
